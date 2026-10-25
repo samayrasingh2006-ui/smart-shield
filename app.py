@@ -18,6 +18,66 @@ except Exception as e:
     news_model = None
     st.error(f"Could not load the news model: {e}"
  )
+    # Navigation menu
+page = st.sidebar.radio(
+    "🛡️ Navigation",
+    ["Home", "Detection", "About"]
+)
+
+# Home page
+if page == "Home":
+    st.title("🛡️ FAKE SHIELD")
+    st.subheader("Your Digital Safety Companion")
+
+    st.write(
+        "Identify suspicious messages and analyze news "
+        "with our fake news and scam detection prototype."
+    )
+
+    st.divider()
+
+    st.markdown("### Protect yourself online")
+    st.write("🔍 Analyze suspicious messages.")
+    st.write("📰 Check news articles using our trained model.")
+    st.write("⚠️ Review warning signs before trusting a message.")
+
+    st.info("Select Detection from the sidebar to get started.")
+
+    st.caption(
+        "FAKE SHIELD is a student prototype. "
+        "Its results are not a guarantee of safety or factual accuracy."
+    )
+
+    st.stop()
+
+# About page
+elif page == "About":
+    st.title("About FAKE SHIELD")
+
+    st.write(
+        "FAKE SHIELD is a college mini-project designed "
+        "to demonstrate scam warning detection and fake "
+        "news classification."
+    )
+
+    st.markdown("### Technologies Used")
+    st.write("- Python")
+    st.write("- Streamlit")
+    st.write("- Machine learning with a trained news model")
+    st.write("- Rule-based scam risk scoring")
+
+    st.markdown("### How It Works")
+    st.write(
+        "The scam detector checks configured warning keywords "
+        "and calculates a prototype risk score. The news detector "
+        "uses a trained model to predict whether text is fake or real."
+    )
+
+    st.caption(
+        "Predictions may be incorrect and should be independently verified."
+    )
+
+    st.stop()
 
 
 st.title("🛡️ FAKE SHIELD")
