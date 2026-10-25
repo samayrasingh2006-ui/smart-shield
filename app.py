@@ -5,7 +5,7 @@ from pathlib import Path
 st.set_page_config(
     page_title="FAKE SHIELD",
     page_icon="🛡️",
-    layout="centered"
+    layout="wide"
 )
 @st.cache_resource
 def load_news_model():
